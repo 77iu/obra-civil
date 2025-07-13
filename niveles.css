@@ -1,222 +1,159 @@
-
-form,
-.container{
- display: flex;
- justify-content: center;
- align-items: center;
-
-}
-.container{
-
-width: auto;
- flex-wrap: wrap;
- /* margin-top: 100px; */
-}
-.container p{
-    padding: 10px;
-}
-.container p span{
-   background-color: yellow;
-}
-
-.container .headline{
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Obra Civil - Calculador de niveles por distancia</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Obra Civil - Descubre experiencias laborales en el mundo de la construcción y accede a herramientas prácticas para mejorar tus trabajos de obra." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="button--bg--menu.css" />
+    <link rel="stylesheet" href="bloques.css">
+    <link rel="stylesheet" href="contenido.css" />
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="niveles.css">
+   
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <button class="button" id="toggleButton"></button>
+    <div class="bg--menu" id="bgMenu">
+      <div class="bloque--uno">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#experiencia">Experiencia Laboral</a>
+        <a href="galeria.html#gArizu">Actualidad</a>
+        <a href="#" onclick="remove()">Mi información</a>
+        <a href="#container" onclick="remove()">Herramientas</a>
+        <a href="galeria.html">Galería</a>
+      
+      </div>
+      <div class="redes--bg">
+        <a href="https://api.whatsapp.com/send?phone=542617206309&" target="_blank"><box-icon name='whatsapp' type='logo' ></box-icon></a>
+          <a href="https://www.linkedin.com/in/miguel-cortez-657706245" target="_blank"><box-icon type='logo' name='linkedin'></box-icon></a>
+       <a href="mailto:mecs77iu@gmail.com" target="_blank"><box-icon name='gmail' type='logo' ></box-icon></a>
+      </div>
+    </div>
     
-    width: 100%;
- display: flex;
- justify-content: center;
- flex-wrap: wrap;
-
-}
-
-.container .headline form{
- max-width: 425px;
- width: 100%;
- height: 100%;
- background: var(--cuadricula);
-
- flex-direction: column;
- gap: 2px;
- padding: 50px 1px;
-
-}
-.container .headline form button{
- width: 200px;
- height: 80px;
- padding: 15px 20px;
- margin-top: 10px;
-   background-color: transparent;
- border: unset;
- 
- transition:0.3s ease ;
- font-weight: 600;
- position: relative;
-
- font-size: 16px;
-}
-.container .headline form button:after{
- content: "";
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- clip-path:path("M20 0 Q180 0 180 0 200 40 200 40 180 80 180 80 20 80 20 80 0 40 0 40 20 0 20 0 22 5 22 5 5 40 5 40 22 75 22 75 178 75 178 75 195 40 195 40 178 5 178 5 22 5 22 5 20 0 20 0") ;
- background-color: rgb(0, 0, 0);
- transition:0.3s ease ;
-}
-.container .headline form button:hover{
- color: blue;
-}
-.container .headline form button:hover:after{
- background-color: blue;
-}
-.container input{
- border: unset;
- padding: 10px 20px;
- text-align: center;
- border-radius: 25px;
-background-color: rgb(234, 234, 234);
-}
-.container output{
- padding-top: 20px;
- padding: 10px;
-
-}
-.container .dato{
- width: 100%;
- height:50px;
- font-weight: 600;
- color: blue;
- text-align: center;
-}
-
-.container h3{
- text-align: center;
- padding-bottom: 10px;
-
-}
-.container h2{
-   margin-top: 100px;
-    padding: 20px;
-}
-
-.container .dato {
- width: 100%;
- height: 50px;
- font-weight: 600;
- text-align: center;
- clip-path: polygon(0%0%,100%0%,100%0%,0%0%);
-}
-
-
-.container .dato.error {
- color: red;
- animation: dato 1s ease forwards;
-}
-
-.container .dato.resultado {
- color: blue;
- animation: dato 0.5s ease forwards;
-}
-@keyframes dato{
-0%{clip-path: polygon(0%0%,100%0%,100%0%,0%0%);}
-100%{clip-path: polygon(0%0%,100%0%,100%100%,0%100%);}
-}
-
-
-/* visualizador===================================== */
-.container .visualizador {
-
-   max-width: 425px;
-   width: 100%;
-   aspect-ratio: 1/1.2;
-   clip-path: inset(0 1px 0 1px);
-   position: relative;
-   padding: 10px 0;
-  
- }
- 
- /* Define la perspectiva para la escena 3D */
- .container .scene {
-    width: 100%;
-    /* aspect-ratio: 1/0.6; */
-    height: 50%;
-    perspective: 800px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- 
- }
- .container .buttons {
-    width: 100%;
-    /* aspect-ratio: 1/0.2; */
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    /* margin-top: 10px; */
-    gap: 3px;
- }
- .container .buttons button {
-    width: 100%;
-    height: 100%;
-    border: unset;
-   background: linear-gradient(to top,rgb(29, 158, 158),white,rgb(29, 158, 158));
-    transition: filter 0.2s ease-in-out; /* Añade una transición para el filtro */
- }
- .container .buttons button:active {
-    filter: brightness(1.5); /* Aumenta el brillo cuando el botón es presionado */
- }
- .container #left-button {
-    clip-path: polygon(10%50%,20%0%,40%0%,30%50%,40%100%,20%100%);
- }
- .container #right-button {
-    clip-path: polygon(60%0%,80%0%,90%50%,80%100%,60%100%,70%50%);
- }
- /* Configura el cubo 3D */
- .container .box  {
-    will-change: transform;
-    width: 100%;
-    height: 90%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-    position: relative;
-    transform: translateZ(-400px) rotateY(0deg);
- }
- 
- /* Estilos de las imágenes dentro del cubo */
- .container .box .card {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-style: preserve-3d;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    backface-visibility: hidden;
- }
- .card01 {
-    transform: rotateY(0deg) translateZ(400px);
- }
- .card02 {
-    transform: rotateY(60deg) translateZ(400px);
- }
- .card03 {
-    transform: rotateY(120deg) translateZ(400px);
- }
- .card04 {
-    transform: rotateY(180deg) translateZ(400px);
- }
- .card05 {
-    transform: rotateY(240deg) translateZ(400px);
- }
- .card06 {
-    transform: rotateY(300deg) translateZ(400px);
- }
- 
+    <header>
+      <a href="index.html" class="logo"><span>Obra</span><span>Civil</span></a>
+      <div class="bloques">
+        <nav class="bloque--uno">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#experiencia">Experiencia Laboral</a>
+          <a href="galeria.html#gArizu">Actualidad</a>
+          <a href="#">Mi información</a>
+          <a href="#container">Herramientas</a>
+          <a href="galeria.html">Galería</a>
+      
+        </nav>
+    
+      </div>
+    </header>
+   
+    <div class="container" id="container">
+  <h2>Calculador de niveles por distancia</h2>
+      <p>En el trabajo de campo, la precisión y rapidez son esenciales. Esta herramienta te permite calcular el nivel correspondiente a cualquier distancia entre dos puntos, generando una <span>rasante precisa</span>. Además de trabajar dentro de los límites establecidos, puedes calcular niveles para distancias anteriores a la inicial o posteriores a la final, lo que la hace ideal para obras que requieren soluciones inmediatas o mediciones particulares. Solo necesitas ingresar las distancias y niveles iniciales y finales, y la herramienta se encargará del resto.</p>
+      <div class="headline">
+        <div class="visualizador">
+    <h3>Ideal para...</h3>
+         
+            <div class="scene">
+                
+                <div class="box" id="box">
+                    <div class="card card01" >
+                      <h4>Nivelación en barrios</h4>
+                      <p>Para establecer alturas precisas en el desarrollo de nuevos barrios, asegurando uniformidad en el terreno.</p>
+                    </div>
+                    <div class="card card02" >
+                      <h4>Red de cloacas</h4>
+                      <p>Cálculo de niveles precisos para la correcta pendiente en tuberías de aguas residuales.</p>
+                    </div>
+                    <div class="card card03" >
+                      <h4>Drenaje pluvial en calles</h4>
+                      <p>Garantiza el nivel adecuado para el flujo de aguas pluviales, evitando inundaciones en zonas urbanas.</p>
+                    </div>
+                    <div class="card card04" >
+                      <h4>Diseño de parques y áreas verdes</h4>
+                      <p>Ayuda a nivelar el terreno en espacios recreativos, facilitando la construcción de caminos y áreas de césped uniforme.</p>
+                    </div>
+                    <div class="card card05" >
+                      <h4>Construcción de carreteras y caminos rurales</h4>
+                      <p>Para el ajuste de niveles que aseguran pendientes y rasantes necesarias en tramos de carretera.</p>
+                    </div>
+                    <div class="card card06" >
+                      <h4>Trazado de vías ferroviarias</h4>
+                      <p>Permite calcular niveles para establecer la rasante en vías férreas, fundamental para la estabilidad del recorrido.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="buttons">
+                <button id="left-button"></button>
+                <button id="right-button"></button>
+            </div>
+        </div>
+        <form id="formulario">
+          <label for="distancia_inicial">Distancia inicial:</label>
+          <input type="number" id="distancia_inicial" value="0" readonly>
+      
+          <label for="distancia_final">Distancia final:</label>
+          <input type="number" id="distancia_final">
+      
+          <label for="nivel_inicial">Nivel inicial:</label>
+          <input type="number" id="nivel_inicial">
+      
+          <label for="nivel_final">Nivel final:</label>
+          <input type="number" id="nivel_final">
+      
+          <label for="nueva_distancia">Nueva distancia:</label>
+          <input type="number" id="nueva_distancia">
+      
+          <button type="button" onclick="calcularNuevoNivel()">Nuevo nivel</button>
+      
+          <label for="nuevo_nivel"></label>
+          <output class="dato" id="nuevo_nivel"></output>
+          
+        </form>
+       </div>
+      
+    </div>
+    <div class="contenido" id="contenido">
+      <div class="nosotros card">
+        <h3>Contenido</h3>
+        <a href="index.html#experiencia">Experiencia </a>
+        <a href="galeria.html#gMitre" class="blue">• Edificio de departamentos</a>
+        <a href="galeria.html#gColorado" class="blue">• Consorcio Río Colorado</a>
+        <a href="galeria.html#gAlameda" class="blue">• Iglesia de la Alameda</a>
+        <a href="galeria.html#gPaso" class="blue">• Av. Paso de los Andes</a>
+        <a href="galeria.html#gPedro" class="blue">• Paseo Pedro Molina</a>
+        <a href="galeria.html#gTemplo" class="blue">• Iglesia de Jesucristo de los Santos de los Últimos Días</a>
+        <a href="galeria.html#gPlanta" class="blue">• SIRTEC</a>
+          <a href="galeria.html#gCuyoil" class="blue">• Barrio Proyecto Cuyoil II</a>
+      </div>
+      <div class="comunicate card">
+        
+        <a href="galeria.html#gArizu">Actualidad</a>
+        <a href="#">Mi información</a>
+        <a href="niveles.html">Herramientas</a>
+        <a href="niveles.html" class="blue">• Calculador de niveles por distancia</a>
+        <a href="galeria.html">Galería</a>
+      
+      </div>
+      <div class="redes card">
+        <h3>Si tienes alguna consulta o sugerencia puedes encontrarme </h3>
+        <div>
+          <a href="https://api.whatsapp.com/send?phone=542617206309&" target="_blank"><box-icon name='whatsapp' type='logo' ></box-icon></a>
+           <a href="https://www.linkedin.com/in/miguel-cortez-657706245" target="_blank"><box-icon type='logo' name='linkedin'></box-icon></a>
+          <a href="mailto:mecs77iu@gmail.com" target="_blank"><box-icon name='gmail' type='logo' ></box-icon></a>
+         
+        </div>
+      </div>
+    </div>
+    <footer><p><span>Obra</span><span>Civil</span> creado por Miguel Cortez</p></footer>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
