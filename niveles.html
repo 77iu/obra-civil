@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Obra Civil - Calculador de niveles por distancia</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Obra Civil - Descubre experiencias laborales en el mundo de la construcción y accede a herramientas prácticas para mejorar tus trabajos de obra." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="button--bg--menu.css" />
+    <link rel="stylesheet" href="bloques.css">
+    <link rel="stylesheet" href="contenido.css" />
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="niveles.css">
+   
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <button class="button" id="toggleButton"></button>
+    <div class="bg--menu" id="bgMenu">
+      <div class="bloque--uno">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#experiencia">Experiencia Laboral</a>
+        <a href="galeria.html#gArizu">Actualidad</a>
+        <a href="#" onclick="remove()">Mi información</a>
+        <a href="#container" onclick="remove()">Herramientas</a>
+        <a href="galeria.html">Galería</a>
+      
+      </div>
+      <div class="redes--bg">
+        <a href="https://api.whatsapp.com/send?phone=542617206309&" target="_blank"><box-icon name='whatsapp' type='logo' ></box-icon></a>
+        <a href="https://www.linkedin.com/in/miguel-cortez-065436339" target="_blank"><box-icon type='logo' name='linkedin'></box-icon></a>
+       <a href="mailto:mecs77iu@gmail.com" target="_blank"><box-icon name='gmail' type='logo' ></box-icon></a>
+      </div>
+    </div>
+    
+    <header>
+      <a href="index.html" class="logo"><span>Obra</span><span>Civil</span></a>
+      <div class="bloques">
+        <nav class="bloque--uno">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#experiencia">Experiencia Laboral</a>
+          <a href="galeria.html#gArizu">Actualidad</a>
+          <a href="#">Mi información</a>
+          <a href="#container">Herramientas</a>
+          <a href="galeria.html">Galería</a>
+      
+        </nav>
+    
+      </div>
+    </header>
+   
+    <div class="container" id="container">
+  <h2>Calculador de niveles por distancia</h2>
+      <p>En el trabajo de campo, la precisión y rapidez son esenciales. Esta herramienta te permite calcular el nivel correspondiente a cualquier distancia entre dos puntos, generando una <span>rasante precisa</span>. Además de trabajar dentro de los límites establecidos, puedes calcular niveles para distancias anteriores a la inicial o posteriores a la final, lo que la hace ideal para obras que requieren soluciones inmediatas o mediciones particulares. Solo necesitas ingresar las distancias y niveles iniciales y finales, y la herramienta se encargará del resto.</p>
+      <div class="headline">
+        <div class="visualizador">
+    <h3>Ideal para...</h3>
+         
+            <div class="scene">
+                
+                <div class="box" id="box">
+                    <div class="card card01" >
+                      <h4>Nivelación en barrios</h4>
+                      <p>Para establecer alturas precisas en el desarrollo de nuevos barrios, asegurando uniformidad en el terreno.</p>
+                    </div>
+                    <div class="card card02" >
+                      <h4>Red de cloacas</h4>
+                      <p>Cálculo de niveles precisos para la correcta pendiente en tuberías de aguas residuales.</p>
+                    </div>
+                    <div class="card card03" >
+                      <h4>Drenaje pluvial en calles</h4>
+                      <p>Garantiza el nivel adecuado para el flujo de aguas pluviales, evitando inundaciones en zonas urbanas.</p>
+                    </div>
+                    <div class="card card04" >
+                      <h4>Diseño de parques y áreas verdes</h4>
+                      <p>Ayuda a nivelar el terreno en espacios recreativos, facilitando la construcción de caminos y áreas de césped uniforme.</p>
+                    </div>
+                    <div class="card card05" >
+                      <h4>Construcción de carreteras y caminos rurales</h4>
+                      <p>Para el ajuste de niveles que aseguran pendientes y rasantes necesarias en tramos de carretera.</p>
+                    </div>
+                    <div class="card card06" >
+                      <h4>Trazado de vías ferroviarias</h4>
+                      <p>Permite calcular niveles para establecer la rasante en vías férreas, fundamental para la estabilidad del recorrido.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="buttons">
+                <button id="left-button"></button>
+                <button id="right-button"></button>
+            </div>
+        </div>
+        <form id="formulario">
+          <label for="distancia_inicial">Distancia inicial:</label>
+          <input type="number" id="distancia_inicial" value="0" readonly>
+      
+          <label for="distancia_final">Distancia final:</label>
+          <input type="number" id="distancia_final">
+      
+          <label for="nivel_inicial">Nivel inicial:</label>
+          <input type="number" id="nivel_inicial">
+      
+          <label for="nivel_final">Nivel final:</label>
+          <input type="number" id="nivel_final">
+      
+          <label for="nueva_distancia">Nueva distancia:</label>
+          <input type="number" id="nueva_distancia">
+      
+          <button type="button" onclick="calcularNuevoNivel()">Nuevo nivel</button>
+      
+          <label for="nuevo_nivel"></label>
+          <output class="dato" id="nuevo_nivel"></output>
+          
+        </form>
+       </div>
+      
+    </div>
+    <div class="contenido" id="contenido">
+      <div class="nosotros card">
+        <h3>Contenido</h3>
+        <a href="index.html#experiencia">Experiencia </a>
+        <a href="galeria.html#gMitre" class="blue">• Edificio de departamentos</a>
+        <a href="galeria.html#gColorado" class="blue">• Consorcio Río Colorado</a>
+        <a href="galeria.html#gAlameda" class="blue">• Iglesia de la Alameda</a>
+        <a href="galeria.html#gPaso" class="blue">• Av. Paso de los Andes</a>
+        <a href="galeria.html#gPedro" class="blue">• Paseo Pedro Molina</a>
+        <a href="galeria.html#gTemplo" class="blue">• Iglesia de Jesucristo de los Santos de los Últimos Días</a>
+        <a href="galeria.html#gPlanta" class="blue">• SIRTEC</a>
+          <a href="galeria.html#gCuyoil" class="blue">• Barrio Proyecto Cuyoil II</a>
+      </div>
+      <div class="comunicate card">
+        
+        <a href="galeria.html#gArizu">Actualidad</a>
+        <a href="#">Mi información</a>
+        <a href="niveles.html">Herramientas</a>
+        <a href="niveles.html" class="blue">• Calculador de niveles por distancia</a>
+        <a href="galeria.html">Galería</a>
+      
+      </div>
+      <div class="redes card">
+        <h3>Si tienes alguna consulta o sugerencia puedes encontrarme </h3>
+        <div>
+          <a href="https://api.whatsapp.com/send?phone=542617206309&" target="_blank"><box-icon name='whatsapp' type='logo' ></box-icon></a>
+          <a href="https://www.linkedin.com/in/miguel-cortez-065436339" target="_blank"><box-icon type='logo' name='linkedin'></box-icon></a>
+          <a href="mailto:mecs77iu@gmail.com" target="_blank"><box-icon name='gmail' type='logo' ></box-icon></a>
+         
+        </div>
+      </div>
+    </div>
+    <footer><p><span>Obra</span><span>Civil</span> creado por Miguel Cortez</p></footer>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

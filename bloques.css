@@ -1,0 +1,58 @@
+*{
+    transition: 0.5s ease;
+}
+.bloques{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+.bloques .bloque--uno
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.bloques .bloque--uno a
+
+{
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 16px;  
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: aqua;
+    
+}
+
+
+.bloques .bloque--uno a:after
+{
+    content: "";
+    z-index: -5;
+    position: absolute;
+  margin-right: -18px;
+   aspect-ratio: 3/1;
+    height: 80%;
+  
+    background-color: aqua;
+   transition: 0.5s ease;
+   clip-path: polygon(73%5%,73%5%,83%50%,73%95%,73%95%,83%50%,73%5%,73%5%,83%50%,73%95%,73%95%,83%50%);
+}
+.bloques .bloque--uno a:hover:after{
+    clip-path: polygon(73%5%,85%5%,95%50%,85%95%,80%95%,90%50%,80%5%,78%5%,88%50%,78%95%,73%95%,83%50%);
+}
+
+@media only screen and (max-width: 1050px){
+    .bloques .bloque--uno 
+    {
+        display: none;
+    }
+ 
+
+
+ 
+}

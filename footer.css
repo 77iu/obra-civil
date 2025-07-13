@@ -1,0 +1,31 @@
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: #000000;
+    position: relative;
+   
+}
+footer p{
+  color: aqua;
+  text-align: center;
+  line-height: 60px;
+}
+footer:after{
+    content: "";
+    width: 280px;
+    height: 120px;
+    position: absolute;
+  bottom:59px ;
+    right:0;
+    background-color: rgb(0, 0, 0);
+    clip-path: path("M0 120 Q282 120 282 50 282 122 282 122 0 122 0 122 0 120 0 120");
+}
+footer p span{
+  
+  color: aqua;
+padding: 2px;
+}
+footer p span:last-child{
+  font-weight: 600;
+  color: rgb(29, 158, 158);
+}
