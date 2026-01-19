@@ -52,8 +52,8 @@ letter-spacing: 2px;
 .list .auditorio:after{
   content: "Auditorio";
 }
-.list .e__belgrano:after{
-  content: "Estacionamiento calle Belgrano";
+.list .p_byl:after{
+  content: "Plaza calle Belgrano";
 }
 .list .camara__:after{
   content: "Cámara de Contacto";
@@ -77,12 +77,15 @@ letter-spacing: 2px;
 .list .ancillary__:after{
   content: "Ancillary";
 }
-.list .e__alvarez:after{
-  content: "Estacionamiento calle A. Alvarez";
+.list .p_alvarez:after{
+  content: "Plaza calle A. Alvarez";
 }
 
-.list .red__cloaca:after{
-  content: "RC - A. Alvarez";
+.list .remodelacion:after{
+  content: "Remodelación veredas y calles";
+}
+.list .urbanizacion:after{
+  content: "Urbanización";
 }
 
 
