@@ -6,13 +6,10 @@
   --logo: #00ffff;
   --logo02: #1d9e9e;
   --black: #000000;
---safety:#CCFF00;
+--safety:#F6FA00;
 --steel:#4A5568;
 --concrete:#95A5A6;
 }
-/* --color-acero-estructural: #4A5568; 
-  --color-hormigon-natural: #95A5A6;  
-  --color-amarillo-alerta: #FFCC00; */
 html {
   font-size: 62.5%;
 }
@@ -52,10 +49,10 @@ body {
   max-width: 1920px;
   margin: auto;
   position: relative;
-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M0 10.5 L0 0 L40 0 L40 40 L0 40 L0 10.5 L39.5 10.5 L39.5 29.5 L0.5 29.5 L0.5 10.5 L0 10.5 L0 30.5 L19.5 30.5 L19.5 40 L20.5 40 L20.5 30.5 L40 30.5 L40 9.5 L20.5 9.5 L20.5 0 L19.5 0 L19.5 9.5 L0 9.5 Z" fill="%2313101011"/></svg>');
+background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M0 10.5 L0 0 L40 0 L40 40 L0 40 L0 10.5 L39.5 10.5 L39.5 29.5 L0.5 29.5 L0.5 10.5 L0 10.5 L0 30.5 L19.5 30.5 L19.5 40 L20.5 40 L20.5 30.5 L40 30.5 L40 9.5 L20.5 9.5 L20.5 0 L19.5 0 L19.5 9.5 L0 9.5 Z" fill="%2313101009"/></svg>');
   background-repeat: repeat;
   background-size: 100px 100px;
-  /* pointer-events: none;  */
+  color: #13101009;
  
 }
 p {
@@ -715,11 +712,6 @@ z-index: 10;
      background:var(--safety); 
       clip-path: polygon(0 9px, 9px 0, calc(100% - 9px) 0, 100% 9px, 100% calc(100% - 9px), calc(100% - 9px) 100%, 9px 100%, 0 calc(100% - 9px), 0 calc(100% - 13px), 13px 100%, calc(100% - 13px) 100%, 100% calc(100% - 13px), 100% 13px, calc(100% - 13px) 0, 13px 0, 0 13px);
     }
-    /* .primary_button::after,
-    .primary_button::before
-     {
-     filter: brightness(4);
-    } */
     .primary_button:hover {
       transform: scale(1.05);
       
@@ -756,46 +748,17 @@ footer:after {
   );
 }
 footer p {
-  color: var(--logo);
+  color: var(--safety);
   text-align: center;
   line-height: 60px;
 }
 footer p span {
-  color: var(--logo);
+  color: var(--safety);
   padding: 2px;
 }
 footer p span:last-child {
   font-weight: 600;
-  color: var(--logo02);
+  color: var(--safety);
 }
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--back);
-  border-radius: 0 0 10px 10px;
-  padding: 10px 0;
-  list-style: none;
-  margin: 0;
-  z-index: 1;
-  clip-path: polygon(0%0%, 100%0%, 100%0%, 0%0%);
-}
-@keyframes dropani {
-  0% {
-    clip-path: polygon(0%0%, 100%0%, 100%0%, 0%0%);
-  }
-  100% {
-    clip-path: polygon(0%0%, 100%0%, 100%100%, 0%100%);
-  }
-}
-.dropdown-menu li a {
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown:hover .dropdown-menu {
-  display: block;
-  animation: dropani 0.3s linear forwards;
-}
+
 /* #endregion */
