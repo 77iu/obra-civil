@@ -1,0 +1,346 @@
+.bloques {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+.bloques .bloque--uno {
+  display: flex;
+  align-items: center;
+}
+.bloques .bloque--uno a {
+  padding: 3px 5px;
+  margin: 10px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Limpieza visual */
+}
+.bloque--uno a::after {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  transition: 0.5s ease;
+}
+
+:root {
+  --white: #ffffff; /* navbar01 */
+  --nav02: #1d9e9e; /* navbar02 */
+  --nav03: #ccff00; /* navbar03 */
+  --nav04: #ffd500; /* navbar04 */
+  --nav05: #33fc5f; /* navbar05 */
+}
+
+/* navbar01 */
+/* =========================================== */
+.bloque--uno.estilo-nav01 a {
+  color: var(--white);
+}
+.bloque--uno.estilo-nav01 a::after {
+  height: 95%;
+  width: 100%;
+  border-bottom: 1px solid var(--white);
+  clip-path: polygon(0%0%, 0%0%, 0%100%, 0%100%);
+}
+.bloques .bloque--uno a:hover:after {
+  clip-path: polygon(0%0%, 100%0%, 100%100%, 0%100%);
+}
+
+/* navbar02 */
+/* =========================================== */
+.bloque--uno.estilo-nav02 a {
+  color: var(--nav02);
+}
+.bloque--uno.estilo-nav02 a:after {
+  height: 90%;
+  width: 0%;
+  border-bottom: 1px solid var(--nav02);
+  border-top: 1px solid var(--nav02);
+}
+.bloque--uno.estilo-nav02 a:hover:after {
+  width: 100%;
+}
+
+/* navbar03 */
+/* =========================================== */
+.bloque--uno.estilo-nav03 a {
+  color: var(--nav03);
+}
+.bloque--uno.estilo-nav03 a:after {
+  height: 90%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--nav03);
+  clip-path: polygon(50%0%, 50%0%, 50%100%, 50%100%);
+}
+
+.bloque--uno.estilo-nav03 a:hover:after {
+  clip-path: polygon(0%0%, 100%0%, 100%100%, 0%100%);
+}
+
+/* AFTER 04 */
+/* =========================================== */
+.bloque--uno.estilo-nav04 a {
+  color: var(--nav04);
+}
+.bloque--uno.estilo-nav04 a:after {
+  height: 90%;
+  width: 100%;
+  border: 1px solid var(--nav04);
+  clip-path: polygon(0%100%, 100%0%, 100%0%, 0%100%);
+}
+.bloque--uno.estilo-nav04 a:hover:after {
+  clip-path: polygon(0%0%, 100%0%, 100%100%, 0%100%);
+}
+
+/* AFTER 05 */
+/* =========================================== */
+.bloque--uno.estilo-nav05 a {
+  color: var(--nav05);
+}
+.bloque--uno.estilo-nav05 a:after {
+  height: 90%;
+  width: 100%;
+  border-top: 1px solid var(--nav05);
+  border-bottom: 1px solid var(--nav05);
+  clip-path: polygon(100%0%, 100%0%, 0%100%, 0%100%);
+}
+.bloque--uno.estilo-nav05 a:hover:after {
+  clip-path: polygon(0%0%, 100%0%, 100%100%, 0%100%);
+}
+
+/* AFTER 06 */
+/* =========================================== */
+/* .bloques .bloque--uno a {
+  padding: 3px 5px;
+  margin: 10px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hotpink;
+}
+.bloques .bloque--uno a:after {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  height: 130%;
+  opacity: 0;
+  width: 100%;
+border-radius: 5px;
+  transition: 0.5s ease;
+  border-top: 1px solid hotpink;
+  border-bottom: 1px solid hotpink;
+  
+}
+.bloques .bloque--uno a:hover:after {
+  height: 90%;
+  opacity: 1;
+} */
+
+/* AFTER 07 */
+/* =========================================== */
+/* .bloques .bloque--uno a {
+  padding: 3px 5px;
+  margin: 10px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: greenyellow;
+}
+.bloques .bloque--uno a::after {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  height: 90%;
+  width: 0%;
+  transition: 0.5s ease;
+  border-bottom: 1px solid greenyellow;
+}
+.bloques .bloque--uno a:hover:after {
+ width: 100%;
+  
+}
+.bloques .bloque--uno a::before {
+   content: "";
+  z-index: -5;
+  position: absolute;
+  height: 110%;
+  width: 0%;
+  transition: 0.5s ease;
+  border-bottom: 1px solid greenyellow;
+}
+.bloques .bloque--uno a:hover:before {
+  width: 70%;
+} */
+
+/* AFTER 08 */
+/* =========================================== */
+/* .bloques .bloque--uno a {
+  padding: 3px 5px;
+  margin: 10px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+}
+.bloques .bloque--uno a::after {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  height: 90%;
+width: 0%;
+  transition: 0.5s ease;
+  border-bottom: 1px solid yellow;
+}
+.bloques .bloque--uno a:hover:after {
+ width: 100%;
+  
+}
+.bloques .bloque--uno a::before {
+   content: "";
+  z-index: -5;
+  position: absolute;
+  height: 100%;
+   width: 0px;
+  transition: 0.5s ease;
+  background-color: yellow;
+  transform: translateY(100%);
+  clip-path: polygon(0%0%,100%0%,50%20%);
+}
+.bloques .bloque--uno a:hover:before {
+  width: 25px;
+} */
+
+/* AFTER 09 */
+/* =========================================== */
+/* :root{--color-nav02:#09e0bc}
+.bloques .bloque--uno a {
+  padding: 3px 5px;
+  margin: 10px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 157, 205);
+  text-decoration: none;
+}
+.bloques .bloque--uno .dropdown-menu a::after,
+.bloques .bloque--uno .dropdown-menu a::before{
+  display: none;
+}
+.bloque--uno .estilo-nav
+
+.bloques .bloque--uno a::after {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  height: 100%;
+width: 100%;
+  transition: 0.5s ease;
+  background-color: rgb(0, 157, 205);
+  clip-path: polygon(0%80%,100%80%,50%80%);
+  transform: translateY(15%);
+}
+.bloques .bloque--uno a:hover:after {
+  clip-path: polygon(0%80%,100%80%,50%100%);
+  
+} */
+
+/* AFTER 10 */
+/* =========================================== */
+/* :root{
+  --color:#09e0bc;
+}
+.bloques .bloque--uno a {
+  padding: 3px 7px;
+  margin: 10px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color);
+  
+}
+.bloques .bloque--uno a:after {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  height: 0%;
+width: 90%;
+border-right: 1px solid var(--color);
+border-left: 1px solid var(--color);
+  transition: 0.5s ease;
+  
+}
+.bloques .bloque--uno a:before {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  height: 90%;
+width: 0%;
+border-top: 1px solid var(--color);
+border-bottom: 1px solid var(--color);
+  transition: 0.5s ease;
+}
+.bloques .bloque--uno a:hover:after {
+ height: 130%;
+}
+.bloques .bloque--uno a:hover:before {
+ width: 110%;
+} */
+
+/* AFTER 11 */
+/* =========================================== */
+/* :root{
+  --color:#ffff00;
+}
+.bloques .bloque--uno a {
+  padding: 3px 5px;
+  margin: 10px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color);
+}
+.bloques .bloque--uno a:after,
+.bloques .bloque--uno a:before {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  height: 100%;
+width: 100%;
+border: 1px solid var(--color);
+  transition: 0.5s ease;
+  clip-path: polygon(0%0%,0%0%,0%0%,0%0%);
+ 
+}
+
+.bloques .bloque--uno a:hover:after,
+.bloques .bloque--uno a:hover:before {
+ clip-path: polygon(0%0%,0%90%,90%90%,90%0%);
+}
+.bloques .bloque--uno a:before{
+  transform: rotate(180deg);
+} */
+
+@media only screen and (max-width: 1050px) {
+  .bloques .bloque--uno {
+    display: none;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
