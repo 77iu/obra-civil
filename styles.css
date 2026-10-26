@@ -3,6 +3,9 @@
 :root {
   --fuente-bloque: "Raleway", sans-serif;
   --fuente-color: #ffffff;
+  --logo: rgb(0, 255, 255);
+  --logo02: rgb(29, 158, 158);
+  --black: rgb(0, 0, 0);
 }
 html {
   font-size: 62.5%;
@@ -36,16 +39,16 @@ body {
   margin: auto;
   position: relative;
   height: 100%;
-  color: #1a1a1a22;
+  color: #1a1a1a11;
 }
 body::before {
   content: "";
   position:fixed;
   inset: 0; 
 z-index: -1;
-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M0 10.5 L0 0 L40 0 L40 40 L0 40 L0 10.5 L39.5 10.5 L39.5 29.5 L0.5 29.5 L0.5 10.5 L0 10.5 L0 30.5 L19.5 30.5 L19.5 40 L20.5 40 L20.5 30.5 L40 30.5 L40 9.5 L20.5 9.5 L20.5 0 L19.5 0 L19.5 9.5 L0 9.5 Z" fill="%231a1a1a22"/></svg>');
+background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M0 10.5 L0 0 L40 0 L40 40 L0 40 L0 10.5 L39.5 10.5 L39.5 29.5 L0.5 29.5 L0.5 10.5 L0 10.5 L0 30.5 L19.5 30.5 L19.5 40 L20.5 40 L20.5 30.5 L40 30.5 L40 9.5 L20.5 9.5 L20.5 0 L19.5 0 L19.5 9.5 L0 9.5 Z" fill="%231a1a1a11"/></svg>');
   background-repeat: repeat;
-  background-size: 20px 20px;
+  background-size: 100px 100px;
   pointer-events: none; 
  
 }
@@ -53,12 +56,6 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
 p {
   font-size: 1.4rem;
   line-height: 150%;
-}
-
-:root {
-  --logo: rgb(0, 255, 255);
-  --logo02: rgb(29, 158, 158);
-  --black: rgb(0, 0, 0);
 }
 /* #region Header */
 header {
