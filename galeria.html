@@ -5,31 +5,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Obra Civil - Descubre experiencias laborales en el mundo de la construcción y accede a herramientas prácticas para mejorar tus trabajos de obra." />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="button--bg--menu.css" />
+     <script src="pre-loader.js" defer></script> 
+  <link rel="stylesheet" href="styles.css" />
    <link rel="stylesheet" href="galeria.css">
-   <link rel="stylesheet" href="navbar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="[https://cdn.jsdelivr.net/npm/](https://cdn.jsdelivr.net/npm/)..."></script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   </head>
   <body>
- 
-  <header>
+ <!-- #region pre_loader -->
+   <div class="preloader-overlay" id="preloader">
+        <div class="loader-container">
+          <div class="spinner five">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+<!-- #endregion -->
+
+ <!-- #region Header -->
+      <header class="main-header">
     <a href="index.html" class="logo">Obra <span>Civil</span></a>
-
-    <div class="bloques">
-
-      <nav class="bloque--uno estilo-nav01" id="navbar-container">
-
-       
-        <a href="#experiencia">Contacto</a>
-        <a href="galeria.html">Partners</a>
-        <a href="#experiencia">Portfolio</a>
-        <a href="#experiencia">EN</a>
-      </nav>
-    </div>
+       <div id="main-header-deck" class="header__deck">
+          <nav class="nav-bar" aria-label="Navegación principal">
+            <ul class="nav-list">
+              <li><a class="button_nav" href="galeria.html">Obras</a></li>
+              <li><a class="button_nav" href="#">Post</a></li>
+              <li><a class="button_nav" href="cards.html">Contacto</a></li>
+              <li><a class="button_nav" href="ideas.html">M77</a></li>
+              <li><a class="button_nav" href="ideas.html">Esquemas</a></li>
+              <li><a class="button_nav" href="ideas.html">Niveles</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button
+          id="toggleButton"
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-header-deck"
+          aria-label="Abrir menú"
+        ></button>
   </header>
+  <!-- #endregion -->
     <div class="galeria " id="aquarella">
       <h3>Edificio Aquarella - Godoy Cruz - Mendoza</h3>
       <p>Oficial Especializado Armador</p>
@@ -174,5 +202,6 @@
              </div>
          </div>
     <footer><p><span>Obra</span><span>Civil</span> creado por Miguel Cortez</p></footer>
+    <script src="toggleButton.js" defer></script>
   </body>
 </html>
