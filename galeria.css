@@ -92,6 +92,10 @@ letter-spacing: 2px;
 .list .urbanizacion:after{
   content: "Urbanización";
 }
+.list .estacionamiento:after{
+  content: "Estacionamiento";
+}
+
 
 
 
