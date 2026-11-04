@@ -209,9 +209,7 @@ body {
   max-width: 1920px;
   margin: auto;
   position: relative;
-   /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><!-- A --><path d="M0 100 Q0 50 50 50 Q50 100 100 100 Z" fill="%23edebeb"/><!-- B --><path d="M0 0 Q50 0 50 50 Q100 50 100 0 Z" fill="%23edebeb"/><!-- C --><path d="M0 0 Q50 0 50 50 Q0 50 0 100 Z" fill="%235dea0b00"/><!-- D --><path d="M100 100 Q50 100 50 50 Q100 50 100 0 Z" fill="%235dea0b00"/></svg>');
-  background-repeat: repeat;
-  background-size: 10px 10px; */
+   
  
 }
 
@@ -456,9 +454,13 @@ font-size: 1.4rem;
   .nav-toggle {
     display: block;
   }
+
   .header__deck {
+      color: #141313;
     position: fixed;
-    background:var(--black);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><!-- A --><path d="M0 100 Q0 50 50 50 Q50 100 100 100 Z" fill="%23000000"/><!-- B --><path d="M0 0 Q50 0 50 50 Q100 50 100 0 Z" fill="%23000000"/><!-- C --><path d="M0 0 Q50 0 50 50 Q0 50 0 100 Z" fill="%23141313"/><!-- D --><path d="M100 100 Q50 100 50 50 Q100 50 100 0 Z" fill="%23141313"/></svg>');
+  background-repeat: repeat;
+  background-size: 10px 10px;
     top: 0;
     left: 0;
     width: 100%;
@@ -467,12 +469,14 @@ font-size: 1.4rem;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease-in-out, visibility 0.4s;
+    transform: rotateY(90deg);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s, transform 0.3s ease-in-out ;
     visibility: hidden;
   }
   .header__deck.is-open {
-    transform: translateX(0);
+    transform: rotateY(0);
+    opacity: 1;
     visibility: visible;
   }
   .nav-list{
