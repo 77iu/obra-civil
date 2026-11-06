@@ -427,7 +427,7 @@ font-size: 1.4rem;
   height: 30px;
   padding: 0;
   position: relative; 
-  z-index: 20;
+  z-index: 99;
   border: unset;
   cursor: pointer;
   background:transparent; 
@@ -455,6 +455,7 @@ font-size: 1.4rem;
   .nav-toggle {
     display: block;
   }
+
   .header__deck {
   position: fixed;
   top: 0;
@@ -464,10 +465,11 @@ font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99;
+  z-index: 50;
   transform: rotateY(90deg);
   opacity: 0;
   visibility: hidden;
+ 
   transition: opacity 0.3s ease-in-out, visibility 0.3s, transform 0.3s ease-in-out;
   background-image: 
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0 100 Q0 50 50 50 Q50 100 100 100 Z" fill="%23000000"/><path d="M0 0 Q50 0 50 50 Q100 50 100 0 Z" fill="%23000000"/><path d="M0 0 Q50 0 50 50 Q0 50 0 100 Z" fill="%2300000000"/><path d="M100 100 Q50 100 50 50 Q100 50 100 0 Z" fill="%2300000000"/></svg>'),
@@ -485,6 +487,24 @@ font-size: 1.4rem;
     flex-direction: column;  
     gap: 15px; 
   }
+  .nav-bar a{
+  color: var(--safety);
+font-size: 1.4rem;
+        position: relative;
+        text-decoration: none;
+        background: transparent;
+        font-family: "Inter", sans-serif;
+        letter-spacing: 1px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       padding: 10px;
+}
+.nav-bar a::after,
+.nav-bar a::before{
+ display: none;
+}
 }
 /* #endregion */
 
@@ -514,6 +534,7 @@ font-size: 1.4rem;
   height: 100%;
   width: calc(100% / 5);
   border: none;
+background-color: red;
   letter-spacing: 1px;
   font-weight: 900;
   background: var(--black); 
