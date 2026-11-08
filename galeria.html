@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Obra Civil - Galería</title>
+    <title>Obra Civil | Galería</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Obra Civil - Descubre experiencias laborales en el mundo de la construcción y accede a herramientas prácticas para mejorar tus trabajos de obra." />
      <script src="pre-loader.js" defer></script> 
   <link rel="stylesheet" href="styles.css" />
    <link rel="stylesheet" href="galeria.css">
-  <script src="[https://cdn.jsdelivr.net/npm/](https://cdn.jsdelivr.net/npm/)..."></script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   </head>
   <body>
@@ -39,12 +38,11 @@
        <div id="main-header-deck" class="header__deck">
           <nav class="nav-bar" aria-label="Navegación principal">
             <ul class="nav-list">
-              <li><a class="button_nav" href="galeria.html">Obras</a></li>
-              <li><a class="button_nav" href="#">Post</a></li>
-              <li><a class="button_nav" href="cards.html">Contacto</a></li>
-              <li><a class="button_nav" href="ideas.html">M77</a></li>
-              <li><a class="button_nav" href="ideas.html">Esquemas</a></li>
-              <li><a class="button_nav" href="ideas.html">Niveles</a></li>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="#">Post</a></li>
+              <li><a href="consultas.html">Consultas</a></li>
+               <li><a href="https://maquetacion77.github.io/maquetacion77" target="_blank">M77</a></li>
+              <li><a href="ideas.html">Niveles</a></li>
             </ul>
           </nav>
         </div>
@@ -60,7 +58,7 @@
   <!-- #endregion -->
     <div class="galeria " id="aquarella">
       <h3>Edificio Aquarella - Godoy Cruz - Mendoza</h3>
-      <p>Oficial Especializado Armador</p>
+      <p class="cat">Oficial Especializado Armador</p>
          <div class="list">
              <img src="images/aquarella_01.webp" alt="">
          </div>
@@ -68,7 +66,7 @@
      </div>
     <div class="galeria " id="gMitre">
       <h3>Edificio Mitre 629 - Ciudad - Mendoza</h3>
-      <p>Oficial Especializado Armador</p>
+      <p class="cat">Oficial Especializado Armador</p>
          <div class="list">
              <img src="images/mitre01.webp" alt="">
              <img src="images/mitre02.webp" alt="">
@@ -80,7 +78,7 @@
      
     <div class="galeria " id="gColorado">
       <h3>Consorcio Río Colorado - Malargüe - Mendoza</h3>
-      <p>Oficial Especializado Armador</p>
+      <p class="cat">Oficial Especializado Armador</p>
          <div class="list">
              <img src="images/vale01.webp" alt="">
              <img src="images/vale02.webp" alt="">
@@ -94,14 +92,13 @@
 
         <div class="galeria " id="gAlameda">
          <h3 >Iglesia de la Alameda - Ciudad - Mendoza</h3>
-         <p>Capataz de Obra</p>
+         <p class="cat">Capataz de Obra</p>
             <div class="list">
                 <img src="images/alameda01.webp" alt="">
                 <img src="images/alameda02.webp" alt="">
                 <img src="images/alameda03.webp" alt="">
                 <img src="images/alameda04.webp" alt="">
                 <img src="images/alameda05.webp" alt="">
-             
                 <img src="images/alameda07.webp" alt="">
              
             </div>
@@ -109,7 +106,7 @@
 
         <div class="galeria" id="gPaso">
           <h3> Remodelación integral de Av. Paso de los Andes - G.Cruz - Mendoza</h3>
-          <p>Capataz de Obra</p>
+          <p class="cat">Capataz de Obra</p>
              <div class="list">
                  <img src="images/paso01.webp" alt="">
                  <img src="images/paso02.webp" alt="">
@@ -122,7 +119,7 @@
 
          <div class="galeria" id="gPedro">
           <h3>  Paseo Pedro Molina - Ciudad - Mendoza</h3>
-          <p>Capataz de Obra</p>
+          <p class="cat">Capataz de Obra</p>
              <div class="list">
               <img src="images/p-molina06.webp" alt="">
                  <img src="images/p-molina01.webp" alt="">
@@ -137,40 +134,73 @@
          <div class="galeria" id="gTemplo">
           <h3>  Iglesia de Jesucristo de los Santos de los Últimos Días -
             Ciudad - Mendoza</h3>
-            <p>Capataz de Obra</p>
+            <p class="cat">Capataz de Obra</p>
              <div class="list">
 
-              <div class="img templo__"><img src="images/templo.webp" alt="Templo"></div>
-              <div class="img ancillary__"><img src="images/ancillary.webp" alt="Ancillary"></div>
+              <div>
+                <img src="images/templo.webp">
+                <p class="subtitulo">Templo</p>
+              </div>
+              <div>
+                <img src="images/ancillary.webp">
+                 <p class="subtitulo">Ancillary</p></div>
+                </div>
                 
                  
                 
              </div>
          </div>
-
+<style>
+  .list div{
+    position: relative;
+  }
+</style>
          <div class="galeria" id="gPlanta">
           <h3>  Sistema integral de recolección y tratamiento de efluentes
             cloacales - Malargüe - Mendoza</h3>
-            <p>Capataz de Obra</p>
+            <p class="cat">Capataz de Obra</p>
              <div class="list">
-              <div class="img camara__"><img src="images/c-contacto01.webp" alt="Cámara de Contacto"></div>
-              <div class="img cerco__ "><img src="images/cerco01.webp" alt="Cerco Perimetral"></div>
-              <div class="img cerco__"><img src="images/cerco02.webp" alt="Cerco Perimetral"></div> 
-                 <div class="img sala__"><img src="images/sala-control01.webp" alt="Sala de Control"></div>
-                 <div class="img zanja__"><img src="images/z-oxidacion01.webp" alt="Zanjas de Oxidación"></div>
-                 <div class="img zanja__"><img src="images/z-oxidacion02.webp" alt="Zanjas de Oxidación"></div>
-                 <div class="img zanja__"><img src="images/z-oxidacion03.webp" alt="Zanjas de Oxidación"></div>
-                 <div class="img playas__"><img src="images/playa04.webp" alt="Playas de Secado"></div>
-                 <div class="img playas__"><img src="images/playa02.webp" alt="Playas de Secado"></div>
-                 <div class="img playas__"><img src="images/playa01.webp" alt="Playas de Secado"></div>
-                 <div class="img playas__"><img src="images/playa03.webp" alt="Playas de Secado"></div>
+              <div>
+                  <img src="images/c-contacto01.webp" alt="Cámara de Contacto">
+                  <p class="subtitulo">Cámara de contacto</p></div>
+              <div>
+                <img src="images/cerco01.webp" alt="Cerco Perimetral">
+              <p class="subtitulo">Cerco perimetral</p></div>
+                 <div>
+                  <img src="images/sala-control01.webp" alt="Sala de Control">
+                  <p class="subtitulo">Sala de control</p>
+                 </div>
+                 <div>
+                  <img src="images/z-oxidacion01.webp" alt="Zanjas de Oxidación">
+                  <p class="subtitulo">Zanjas de oxidación</p>
+                 </div>
+                   <div>
+                  <img src="images/z-oxidacion02.webp" alt="Zanjas de Oxidación">
+                  <p class="subtitulo">Zanjas de oxidación</p>
+                 </div>
+                   <div>
+                  <img src="images/z-oxidacion03.webp" alt="Zanjas de Oxidación">
+                  <p class="subtitulo">Zanjas de oxidación</p>
+                 </div>
+                <div>
+                  <img src="images/playa02.webp" alt="Playas de Secado">
+                  <p class="subtitulo">Playas de secado</p>
+                </div>
+                <div>
+                  <img src="images/playa01.webp" alt="Playas de Secado">
+                  <p class="subtitulo">Playas de secado</p>
+                </div>
+                <div>
+                  <img src="images/playa03.webp" alt="Playas de Secado">
+                  <p class="subtitulo">Playas de secado</p>
+                </div>
                 
              </div>
          </div>
 
          <div class="galeria" id="gCuyoil">
           <h3>Barrio Proyecto Cuyoil II - Maipú - Mendoza</h3>
-            <p>Capataz de Obra</p>
+            <p class="cat">Capataz de Obra</p>
              <div class="list">
                  <img src="images/cuyoil01.webp" alt="">
                  <img src="images/cuyoil03.webp" alt=""> 
@@ -179,19 +209,37 @@
 
          <div class="galeria" id="gArizu">
           <h3>Infraestructura, Urbanización y Arquitectura, Inmuebles Ex Bodega Arizu</h3>
-          <p>Capataz de Obra</p>
+          <p class="cat">Capataz de Obra</p>
              <div class="list">
-              <div class="img auditorio"> <img src="images/arizu - 10.webp"  alt="Auditorio"></div>
-              <div class="img p_byl"> <img src="images/arizu - 05.webp" alt="Plaza Belgrano esq Lisandro de la Torre"></div>
-              <div class="img p_alvarez"> <img src="images/arizu - 13.webp " alt="plaza calle A.Alvarez"></div>
-              <div class="img remodelacion"> <img src="images/arizu - 07.webp " alt="remodelación"></div>
-              <div class="img urbanizacion"> <img src="images/arizu - 14.webp " alt="urbanización"></div>
-              <div class="img estacionamiento"> <img src="images/arizu - 08.webp " alt="estacionamiento"></div>
+              <div>
+                  <img src="images/arizu - 10.webp"  alt="Auditorio">
+                  <p class="subtitulo">Auditorio</p>
+              </div>
+              <div>
+                  <img src="images/arizu - 05.webp" alt="Plaza Belgrano esq Lisandro de la Torre">
+                  <p class="subtitulo">Plaza calle Belgrano</p>
+              </div>
+              <div>
+                 <img src="images/arizu - 13.webp " alt="plaza calle A.Alvarez">
+                  <p class="subtitulo">Plaza calle A. Alvarez</p>
+              </div>
+              <div>
+                  <img src="images/arizu - 07.webp " alt="remodelación">
+                  <p class="subtitulo">Remodelación</p>
+              </div>
+              <div>
+                  <img src="images/arizu - 14.webp " alt="urbanización">
+                  <p class="subtitulo">Urbanización</p>
+              </div>
+              <div>
+                  <img src="images/arizu - 08.webp " alt="estacionamiento">
+                  <p class="subtitulo">Estacionamiento calle Belgrano</p>
+              </div>
              </div>
          </div>
             <div class="galeria" id="cardinales">
           <h3>Edificio Torres Cardinales</h3>
-          <p>Capataz de Obra</p>
+          <p class="cat">Capataz de Obra (Actualidad)</p>
              <div  class="list">
              <img src="images/t_cardinales_01.webp"  alt="Edificio Torres Cardinales">
               <img src="images/t_cardinales_03.webp" alt="Edificio Torres Cardinales">
