@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+    <title>Obra Civil</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Obra Civil - Descubre experiencias laborales en el mundo de la construcción y accede a herramientas prácticas para mejorar tus trabajos de obra." />
+ <link rel="icon" href="favicon.svg" type="image/svg+xml">
+   <script src="pre-loader.js" defer></script>
+  <link rel="stylesheet" href="styles.css" />
+  </head>
+
+
+   
+
+  <body>
+     <!-- #region pre_loader -->
+   <div class="preloader-overlay" id="preloader">
+        <div class="loader-container">
+          <div class="spinner five">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+<!-- #endregion -->
+
+     <!-- #region Header -->
+   <header class="main-header">
+    <a href="index.html" class="logo">Obra <span>Civil</span></a>
+       <div id="main-header-deck" class="header__deck">
+          <nav class="nav-bar" aria-label="Navegación principal">
+            <ul class="nav-list">
+               <li><a href="index.html">Inicio</a></li>
+              <li><a href="galeria.html">Obras</a></li>
+              <li><a href="#">Post</a></li>
+              <li><a href="https://maquetacion77.github.io/maquetacion77" target="_blank">M77</a></li>
+              <li><a href="ideas.html">Niveles</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button
+          id="toggleButton"
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-header-deck"
+          aria-label="Abrir menú"
+        ></button>
+  </header>
+  <!-- #endregion -->    
+
+  <!-- #region consultas -->
+   <section class="consultas-section">
+      <div class="form-container">
+        <h2>Consultas</h2>
+        <form id="consultaForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                placeholder="Ej. Juan"
+              />
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                required
+                placeholder="Ej. Pérez"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="juanperez@email.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="provincia">Provincia</label>
+            <select id="provincia" name="provincia" required>
+              <option value="" disabled selected>
+                Selecciona tu provincia
+              </option>
+              <option value="buenos-aires">Buenos Aires</option>
+              <option value="cordoba">Córdoba</option>
+              <option value="mendoza">Mendoza</option>
+              <option value="santa-fe">Santa Fe</option>
+              <option value="otra">Otra / Interior</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              required
+              placeholder="Escribe aquí tu consulta..."
+            ></textarea>
+          </div>
+          <div class="form-group trap-field">
+            <label for="honeypot">Si eres humano, deja este campo vacío:</label>
+            <input type="text" id="honeypot" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="btn-submit primary_button">Enviar</button>
+
+          <div id="formResponse" class="form-response hidden"></div>
+        </form>
+      </div>
+    </section>
+    <!-- #endregion -->
+  
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const PUBLIC_KEY = "K7-yaV37t-kZm0Rsh";
+        const SERVICE_ID = "service_timd9fl";
+        const TEMPLATE_ID = "template_ox70ztd";
+        emailjs.init(PUBLIC_KEY);
+        document
+          .getElementById("consultaForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            const botTrapValue = document.getElementById("honeypot").value;
+            if (botTrapValue !== "") {
+              console.warn("Envío bloqueado: Se detectó un posible robot.");
+              document.getElementById("consultaForm").reset();
+              return;
+            }
+            const responseDiv = document.getElementById("formResponse");
+            const submitButton = document.querySelector(".btn-submit");
+            const nombre = document.getElementById("nombre").value.trim();
+            const apellido = document.getElementById("apellido").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const provincia = document.getElementById("provincia").value;
+            const mensaje = document.getElementById("mensaje").value.trim();
+            submitButton.textContent = "Enviando...";
+            submitButton.disabled = true;
+            const templateParams = {
+              nombre: nombre,
+              apellido: apellido,
+              email: email,
+              provincia: provincia,
+              mensaje: mensaje,
+            };
+            emailjs
+              .send(SERVICE_ID, TEMPLATE_ID, templateParams)
+              .then(function (response) {
+                console.log("¡Éxito!", response.status, response.text);
+                responseDiv.textContent = `¡Muchas gracias, ${nombre}! Tu consulta ha sido enviada con éxito.`;
+                responseDiv.className = "form-response success";
+                document.getElementById("consultaForm").reset();
+              })
+              .catch(function (error) {
+                console.error("Error de EmailJS:", error);
+                responseDiv.textContent =
+                  "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.";
+                responseDiv.className = "form-response error";
+              })
+              .finally(function () {
+                submitButton.textContent = "Enviar Consulta";
+                submitButton.disabled = false;
+                setTimeout(() => {
+                  responseDiv.className = "form-response hidden";
+                }, 6000);
+              });
+          });
+      });
+    </script>
+
+     <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="toggleButton.js" defer></script>
+    <!-- #region footer -->
+<footer>
+    <p><span>Obra</span><span>Civil</span> creado por Miguel Cortez</p>
+  </footer>
+  <!-- #endregion -->
+  </body>
+</html>
