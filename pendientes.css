@@ -1,0 +1,131 @@
+.container {
+        height: calc(100vh - 130px);
+        margin-top: 70px;
+        width: auto;
+        padding: 0 10px;
+      }
+      .container p {
+        padding: 10px 0;
+      }
+      .container .headline {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .container .headline form {
+        max-width: 480px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+      }
+      .input-box {
+        position: relative;
+        max-width: 49%;
+        height: 40px;
+        /* border-radius: 20px; */
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .input-box input {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: unset;
+        background: transparent;
+        padding: 0 20px;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        font-family: inherit;
+             font-size: 2rem;
+      }
+      .fila-calculo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+      .dato {
+        width: 49.5%;
+        height: 40px;
+        position: relative;
+            font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border-radius: 20px; */
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .container .dato.error {
+        color: red;
+      }
+      .container .dato.resultado {
+        color: blue;
+      }
+      #formulario > div > div {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+      #formulario > div > div > label {
+        width: 49.5%;
+        height: 40px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border-radius: 20px; */
+        position: relative;
+        overflow: hidden;
+      }
+      #formulario > div > div > label::after,
+      .input-box::after,
+      .dato::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+          to left,
+          #0000007c 0px,
+          #00000000 10px,
+          #00000000 calc(100% - 10px),
+          #0000007c 100%
+        );
+        clip-path: polygon(0%0%,0%100%,100%100%,100%0%,calc(100% - 10px)10px,calc(100% - 10px)calc(100% - 10px),100%100%,0%100%,10px calc(100% - 10px),10px 10px);
+      }
+
+      #formulario > div > div > label::before,
+      .input-box::before,
+      .dato::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+          to top,
+          #0000007c 0px,
+          #00000000 10px,
+          #00000000 calc(100% - 10px),
+          #0000007c 100%
+        );
+        clip-path:polygon(0%0%,100%0%,100%100%,0%100%,10px calc(100% - 10px),calc(100% - 10px)calc(100% - 10px),100%100%,100%0%,calc(100% - 10px) 10px,10px 10px) ;
+      }
+
+      #formulario div {
+        width: 100%;
+      } 
+      #contenedor_multiples{
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        
+      }
