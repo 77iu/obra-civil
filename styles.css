@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-  
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');  
+
 /* #region root */
 :root {
   --fuente: "Raleway", sans-serif;
@@ -173,6 +173,8 @@
   
 }
 /* #endregion */
+
+/* #region general */
 html {
   font-size: 62.5%;
 }
@@ -247,6 +249,22 @@ h2:after {
 h3{
   color: var(--steel);
 }
+.slider-header,
+ .banner-lema,
+ .cont_categorias,
+ .niveles-header 
+ {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.disabled{
+  color:gray  !important;
+}
+/* #endregion */
+
 /* #region pre_loader */
 
 
@@ -349,18 +367,7 @@ header {
   z-index: 5;
 }
 
-header:after {
-  content: "";
-  width: 280px;
-  height: 120px;
-  position: absolute;
-  top: 69px;
-  right: 0;
-  background-color: var(--black);
-  clip-path:var(--clip-header-footer);
-  z-index: -5;
-  transform: scaleY(-1);
-}
+
 .logo {
   font-size: 3.2rem;
   color: var(--safety);
@@ -668,20 +675,6 @@ background-color: red;
   animation: fadeIn 0.6s ease-in-out;
 }
 /* #endregion */
-.slider-header,
- .banner-lema,
- .cont_categorias, 
- .niveles-header {
-  width: 100%;
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 10px;
-  overflow: hidden;
-}
-.niveles-header .primary_button{
-margin-left: calc(100% - 150px);
-
-}
 
 /* #region Lema */
 .banner-lema{
@@ -987,10 +980,10 @@ aspect-ratio: 1/1;
       display: inline-block;
       padding: 15px;
       font-size: 1.8rem;
-      font-weight: 900;
+      font-weight: 600;
       letter-spacing: 1px;
       text-decoration: none;
-      color: var(--steel); 
+      color: var(--black); 
       background: transparent;
       border: none;
       text-shadow: none;
@@ -998,10 +991,11 @@ aspect-ratio: 1/1;
       cursor: pointer;
       user-select: none;
       z-index: 0;
-        filter: drop-shadow(0 2px 0.5px rgba(0, 0, 0, 0.863));
+        filter: drop-shadow(0 1px 0.5px rgba(0, 0, 0, 0.863));
         transition:transform 0.3s ease-in-out;
       transform: translateZ(0);
       backface-visibility: hidden;
+      margin: 20px auto;
 }
 .primary_button:after,
 .primary_button:before{
@@ -1071,7 +1065,8 @@ aspect-ratio: 1/1;
     }
       @media only screen and (max-width: 825px){
       .hero article .primary_button,
-      .consultas-section .primary_button{
+      .consultas-section .primary_button,
+      .niveles-header .primary_button{
         width: 100%;
       }
       .primary_btn_15:hover::after,
@@ -1083,14 +1078,17 @@ aspect-ratio: 1/1;
       
     }
     }
+.niveles-header .primary_button{
+margin-left:unset;
 
+}
 /* #endregion */
 
 /* #region cat_web */
-/* .cat_web{
+.cat_web{
   position: relative;
   padding: 20px 0 100px 0;
-} */
+}
 /* #endregion */
 
 /* #region consultas */
@@ -1204,8 +1202,6 @@ aspect-ratio: 1/1;
       }
       /* #endregion */
 
-
-
       /* #region footer */
 footer {
   width: 100%;
@@ -1213,16 +1209,7 @@ footer {
   background-color: var(--black);
   position: relative;
 }
-footer:after {
-  content: "";
-  width: 280px;
-  height: 120px;
-  position: absolute;
-  bottom: 59px;
-  right: 0;
- background-color: var(--black);
-  clip-path:var(--clip-header-footer);
-}
+
 footer p {
   color: var(--safety);
   font-size: 1.4rem;
