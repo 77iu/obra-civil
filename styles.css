@@ -219,7 +219,7 @@ body {
 }
 
  p {
-  font-size: 18px;
+  font-size: 1.6rem;
   color:var(--steel);
   font-weight: 400;
   margin: 0;
@@ -626,11 +626,12 @@ background-color: red;
   color: var(--white);
 }
 .hero_noticia article p {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 400;
   letter-spacing: 1px;
   font-family: var(--fuente);
   color: var(--white);
+  
 }
 
 @media only screen and (max-width: 825px) {
@@ -656,7 +657,7 @@ background-color: red;
     font-size: 1.8rem;
   }
   .hero_noticia article p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   
   .hero .hero_noticia .hero_nav_buttons {
