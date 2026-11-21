@@ -171,6 +171,15 @@
   --clip-subtitulo:path("M0 9 L9 0 L13 0 L0 13 L0 17 L17 0 L18 0 L18 20 L0 20 Z");
   --clip-bisel01:polygon(0%0%,0%100%,100%100%,100%0%,calc(100% - 15px)15px,calc(100% - 15px)calc(100% - 15px),100%100%,0%100%,15px calc(100% - 15px),15px 15px);
   --clip-bisel02:polygon(0%0%,100%0%,100%100%,0%100%,15px calc(100% - 15px),calc(100% - 15px)calc(100% - 15px),100%100%,100%0%,calc(100% - 15px) 15px,15px 15px);
+  --clip-v_button:polygon(0% 0%, calc(100% - 7.5px) 0, calc(100% - 2.5px) 5px, calc(100% - 7.5px) 10px, calc(100% - 32.5px) 10px, calc(100% - 32.5px) 0, calc(100% - 37.5px) 0, calc(100% - 37.5px) 10px, calc(100% - 67.5px) 10px, calc(100% - 67.5px) 0, calc(100% - 72.5px) 0, calc(100% - 72.5px) 10px, 40px 10px, 40px 20px)
+}
+:root {
+  --cuadricula: repeating-linear-gradient(to bottom,transparent 0%,transparent 1%,
+  rgba(0, 128, 0, 0.435) 1%, rgba(0, 128, 0, 0.435) 2%,transparent 2%,transparent 98%, rgba(0, 128, 0, 0.435) 98%, rgba(0, 128, 0, 0.435) 99%,transparent 99% , transparent 100%),
+  repeating-linear-gradient(to left,transparent 0%,transparent 1%,
+  rgba(0, 128, 0, 0.435) 1%, rgba(0, 128, 0, 0.435) 2%,transparent 2%,transparent 98%, rgba(0, 128, 0, 0.435) 98%, rgba(0, 128, 0, 0.435) 99%,transparent 99% , transparent 100%);
+  --gradient01: linear-gradient(to top,rgba(0, 128, 0, 0.435),white,rgba(0, 128, 0, 0.435));
+  
 }
 /* #endregion */
 
@@ -206,7 +215,8 @@ nav a {
 *{
   text-decoration: none;
   list-style: none;
-  font-family: "Raleway", sans-serif;
+  font-family:var(--fuente);
+
   font-optical-sizing: auto;
   letter-spacing: 1px;
 }
@@ -219,7 +229,7 @@ body {
 }
 
  p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color:var(--steel);
   font-weight: 400;
   margin: 0;
@@ -1210,25 +1220,42 @@ margin-left:unset;
 
 /* #region pendientes */
 .container {
-        min-height: calc(100vh - 130px);
-        margin-top:70px;
-        width: auto;
-        padding: 0 10px;
-      }
-      .container p {
+  min-height: calc(100vh - 130px);
+  margin-top: 70px;
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+ 
+}
+
+.container p {
+  padding: 10px 0;
+}
+
+.container form {
+  width: 100%;       
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+@media only screen and (max-width: 825px){
+  .container {
+    flex-direction: column;
+  }
+  .container .lolo {
+    order: 1;
+  }
+  .container form {
+    order: 2;
+  }
+}
+        .container p {
         padding: 10px 0;
-      }
-      .container .headline {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-      .container .headline form {
-        max-width: 480px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 30px 0;
       }
       .input-box {
         position: relative;
@@ -1341,7 +1368,111 @@ margin-left:unset;
         
       }
       /* #endregion */
-      
+   
+/* #region visualizador*/
+.visualizador {
+    max-width: 425px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   h2{
+    width: fit-content;
+   }
+    h4{
+      font-size: 1.6rem;
+    }
+ }
+.scene {
+    width: 100%;
+    height: 250px;
+    perspective: 800px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .buttons {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+ }
+.buttons button {
+  position: relative;
+    width: 50%;
+    height: 100%;
+    border: unset;
+   background-color: transparent;
+  
+ }
+  #right-button::after,
+   #left-button::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+ background: var(--steel);
+    transition: filter 0.2s ease-in-out; 
+    clip-path: var(--clip-v_button);
+   }
+.buttons button:active {
+    filter: brightness(1.5); 
+ }
+
+ #right-button {
+    transform: rotateY(180deg);
+ }
+.box  {
+    will-change: transform;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    position: relative;
+    transform: translateZ(-400px) rotateY(0deg);
+ }
+
+  .box .card {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+    overflow: hidden;
+    padding: 15px;
+ }
+ .card01 {
+   transform: rotateY(0deg) translateZ(400px);
+ }
+ .card02 {
+   transform: rotateY(60deg) translateZ(400px);
+ }
+ .card03 {
+   transform: rotateY(120deg) translateZ(400px);
+ }
+ .card04 {
+   transform: rotateY(180deg) translateZ(400px);
+ }
+ .card05 {
+   transform: rotateY(240deg) translateZ(400px);
+ }
+ .card06 {
+   transform: rotateY(300deg) translateZ(400px);
+ }
+/* #endregion */
+
 /* #region footer */
 footer {
   width: 100%;
